@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CameraVC.swift
 //  image-to-voice-recognition
 //
 //  Created by Michael Alexander on 12/26/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CameraVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
