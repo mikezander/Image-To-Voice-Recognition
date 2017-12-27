@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C42FEF611FF44CB70052025E /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C42FEF601FF44CB70052025E /* SqueezeNet.mlmodel */; };
 		C4AB4DD41FF2E81000DB9BB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AB4DD31FF2E81000DB9BB2 /* AppDelegate.swift */; };
 		C4AB4DD61FF2E81000DB9BB2 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AB4DD51FF2E81000DB9BB2 /* CameraVC.swift */; };
 		C4AB4DD91FF2E81000DB9BB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4AB4DD71FF2E81000DB9BB2 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C42FEF601FF44CB70052025E /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
 		C4AB4DD01FF2E81000DB9BB2 /* image-to-voice-recognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "image-to-voice-recognition.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4AB4DD31FF2E81000DB9BB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4AB4DD51FF2E81000DB9BB2 /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		C4AB4DE71FF2E85100DB9BB2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C42FEF601FF44CB70052025E /* SqueezeNet.mlmodel */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4AB4DD61FF2E81000DB9BB2 /* CameraVC.swift in Sources */,
+				C42FEF611FF44CB70052025E /* SqueezeNet.mlmodel in Sources */,
 				C4AB4DD41FF2E81000DB9BB2 /* AppDelegate.swift in Sources */,
 				C4AB4DE91FF2EDDA00DB9BB2 /* RoundedShadowView.swift in Sources */,
 				C4AB4DED1FF2EF9800DB9BB2 /* RoundedShadowButton.swift in Sources */,

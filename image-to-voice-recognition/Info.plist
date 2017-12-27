@@ -40,6 +40,6 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSCameraUsageDescription</key>
-	<string>We need camre access!</string>
+	<string>We need camera access!</string>
 </dict>
 </plist>

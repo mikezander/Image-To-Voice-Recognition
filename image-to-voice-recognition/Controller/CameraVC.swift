@@ -8,6 +8,8 @@
 
 import UIKit
 import AVFoundation
+import CoreML
+import Vision
 
 class CameraVC: UIViewController {
     
@@ -80,6 +82,10 @@ class CameraVC: UIViewController {
         
         cameraOutput.capturePhoto(with: settings, delegate: self)
     }
+    
+    func resultsMethod(request: VNRequest, error: Error?) {
+        
+    }
 }
 
 extension CameraVC: AVCapturePhotoCaptureDelegate {
@@ -88,6 +94,15 @@ extension CameraVC: AVCapturePhotoCaptureDelegate {
             debugPrint(error)
         } else {
             photoData = photo.fileDataRepresentation()
+            
+            do {
+                let model = try VNCoreMLModel(for: SqueezeNet().model)
+                let request = VNCoreMLRequest(model: model, completionHandler: resultsMethod)
+                let handler = VNImageRequestHandler(data: photoData!)
+                try handler.perform([request])
+            } catch {
+                
+            }
             
             let image = UIImage(data: photoData!)
             self.captureImageView.image = image
