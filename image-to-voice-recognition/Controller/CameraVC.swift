@@ -84,7 +84,19 @@ class CameraVC: UIViewController {
     }
     
     func resultsMethod(request: VNRequest, error: Error?) {
+        guard let results = request.results as? [VNClassificationObservation] else { return }
         
+        for classification in results {
+            if classification.confidence < 0.5 {
+                identificationLbl.text = "I'm not sure what this is. Please try again."
+                confidenceLbl.text = ""
+                break
+            } else {
+                identificationLbl.text = classification.identifier
+                confidenceLbl.text = "CONFIDENCE: \(Int(classification.confidence * 100))%"
+                break
+            }
+        }
     }
 }
 
