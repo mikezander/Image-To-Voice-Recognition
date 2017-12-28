@@ -34,16 +34,17 @@ class CameraVC: UIViewController {
     @IBOutlet weak var roundedLblView: RoundedShadowView!
     @IBOutlet weak var identificationLbl: UILabel!
     @IBOutlet weak var confidenceLbl: UILabel!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         previewLayer.frame = cameraView.bounds
         speechSynthesizer.delegate = self
+        spinner.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,6 +83,10 @@ class CameraVC: UIViewController {
     }
     
     @objc func didTapCameraView() {
+        cameraView.isUserInteractionEnabled = false
+        spinner.isHidden = false
+        spinner.startAnimating()
+        
         let settings = AVCapturePhotoSettings()
         let previewPixelType = settings.availablePreviewPhotoPixelFormatTypes.first!
         let previewFormat = [kCVPixelBufferPixelFormatTypeKey as String: previewPixelType,
@@ -162,7 +167,9 @@ extension CameraVC: AVCapturePhotoCaptureDelegate {
 
 extension CameraVC: AVSpeechSynthesizerDelegate {
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
-        
+        cameraView.isUserInteractionEnabled = true
+        spinner.isHidden = true
+        spinner.stopAnimating()
     }
 }
 

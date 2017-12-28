@@ -77,12 +77,17 @@
                                     <action selector="flashBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QTl-8O-90C"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="4gu-Ys-zMn">
+                                <rect key="frame" x="307" y="574" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="73A-8V-iEW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8Ev-BG-u7J"/>
+                            <constraint firstItem="4gu-Ys-zMn" firstAttribute="centerX" secondItem="Uis-po-ABj" secondAttribute="centerX" id="9Ks-f3-jn0"/>
                             <constraint firstItem="z4J-zF-Tz5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="L1P-aj-hA3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rYq-dg-kO9" secondAttribute="bottom" constant="20" id="RES-bC-ntf"/>
+                            <constraint firstItem="4gu-Ys-zMn" firstAttribute="centerY" secondItem="Uis-po-ABj" secondAttribute="centerY" id="VAI-k4-1pr"/>
                             <constraint firstItem="z4J-zF-Tz5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="30" id="W8F-oD-yoE"/>
                             <constraint firstItem="73A-8V-iEW" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Ybi-9r-xhO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="z4J-zF-Tz5" secondAttribute="trailing" constant="20" id="ajl-ph-LAN"/>
@@ -101,6 +106,7 @@
                         <outlet property="flashBtn" destination="rYq-dg-kO9" id="hHT-iI-H5b"/>
                         <outlet property="identificationLbl" destination="yUh-RP-R6Q" id="uFJ-8G-K7L"/>
                         <outlet property="roundedLblView" destination="z4J-zF-Tz5" id="geK-Dg-PNs"/>
+                        <outlet property="spinner" destination="4gu-Ys-zMn" id="BD2-Tl-Wfb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
